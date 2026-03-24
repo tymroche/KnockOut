@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 27,
+    "active_layer": 0,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -60,7 +60,7 @@
     "ssh_key": ""
   },
   "meta": {
-    "filename": "KnockOutV1.kicad_prl",
+    "filename": "STM32F103C8_breakout.kicad_prl",
     "version": 5
   },
   "net_inspector_panel": {
