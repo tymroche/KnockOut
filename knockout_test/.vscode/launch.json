@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32",
+            "type": "cortex-debug",
+            "request": "launch",
+            "servertype": "openocd",
+            "gdbPath": "gdb-multiarch",
+            "configFiles": [
+                "interface/stlink.cfg",
+                "target/stm32f1x.cfg"
+            ],
+            "executable": "${workspaceFolder}/build/Debug/knockout_test.elf",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none"
+        }
+    ]
+}
