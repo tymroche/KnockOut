@@ -685,6 +685,10 @@
     [
       "47406fae-94cb-4d88-a045-0906ee8deb37",
       "Root"
+    ],
+    [
+      "0b2dffe3-db00-46a4-b36e-6638d6ff0e4d",
+      "PiezoOut"
     ]
   ],
   "text_variables": {}
