@@ -1,7 +1,7 @@
 (kicad_pcb
-	(version 20241229)
+	(version 20260206)
 	(generator "pcbnew")
-	(generator_version "9.0")
+	(generator_version "10.0")
 	(general
 		(thickness 1.6)
 		(legacy_teardrops no)
@@ -36,7 +36,20 @@
 	(setup
 		(pad_to_mask_clearance 0)
 		(allow_soldermask_bridges_in_footprints no)
-		(tenting front back)
+		(tenting
+			(front yes)
+			(back yes)
+		)
+		(covering
+			(front no)
+			(back no)
+		)
+		(plugging
+			(front no)
+			(back no)
+		)
+		(capping no)
+		(filling no)
 		(pcbplotparams
 			(layerselection 0x00000000_00000000_55555555_5755f5ff)
 			(plot_on_all_layers_selection 0x00000000_00000000_00000000_00000000)
@@ -45,15 +58,12 @@
 			(usegerberattributes yes)
 			(usegerberadvancedattributes yes)
 			(creategerberjobfile yes)
-			(dashed_line_dash_ratio 12.000000)
-			(dashed_line_gap_ratio 3.000000)
+			(dashed_line_dash_ratio 12)
+			(dashed_line_gap_ratio 3)
 			(svgprecision 4)
 			(plotframeref no)
 			(mode 1)
 			(useauxorigin no)
-			(hpglpennumber 1)
-			(hpglpenspeed 20)
-			(hpglpendiameter 15.000000)
 			(pdf_front_fp_property_popups yes)
 			(pdf_back_fp_property_popups yes)
 			(pdf_metadata yes)
@@ -77,55 +87,6 @@
 			(outputdirectory "")
 		)
 	)
-	(net 0 "")
-	(net 1 "Net-(J35-Pin_1)")
-	(net 2 "Net-(J4-Pin_1)")
-	(net 3 "VDD")
-	(net 4 "Net-(J7-Pin_1)")
-	(net 5 "Net-(J11-Pin_1)")
-	(net 6 "Net-(J13-Pin_1)")
-	(net 7 "Net-(J5-Pin_1)")
-	(net 8 "Net-(J10-Pin_1)")
-	(net 9 "Net-(J17-Pin_1)")
-	(net 10 "Net-(J33-Pin_1)")
-	(net 11 "Net-(J8-Pin_1)")
-	(net 12 "Net-(J29-Pin_1)")
-	(net 13 "Net-(J27-Pin_1)")
-	(net 14 "Net-(J6-Pin_1)")
-	(net 15 "Net-(J34-Pin_1)")
-	(net 16 "Net-(J40-Pin_1)")
-	(net 17 "Net-(J1-Pin_1)")
-	(net 18 "Net-(J32-Pin_1)")
-	(net 19 "Net-(J31-Pin_1)")
-	(net 20 "Net-(J3-Pin_1)")
-	(net 21 "Net-(J28-Pin_1)")
-	(net 22 "Net-(J38-Pin_1)")
-	(net 23 "Net-(J39-Pin_1)")
-	(net 24 "Net-(J19-Pin_1)")
-	(net 25 "Net-(J9-Pin_1)")
-	(net 26 "Net-(J30-Pin_1)")
-	(net 27 "Net-(J25-Pin_1)")
-	(net 28 "Net-(J18-Pin_1)")
-	(net 29 "Net-(J2-Pin_1)")
-	(net 30 "Net-(J26-Pin_1)")
-	(net 31 "Net-(J12-Pin_1)")
-	(net 32 "Net-(U1-VDDA)")
-	(net 33 "GNDREF")
-	(net 34 "Net-(U1-PD0_OSC_IN)")
-	(net 35 "Net-(C5-Pad2)")
-	(net 36 "/JTMS{slash}SWDIO")
-	(net 37 "/JTDI")
-	(net 38 "/JTCK{slash}SWCLK")
-	(net 39 "/JNTRST")
-	(net 40 "/JTDO")
-	(net 41 "unconnected-(JLINK/SWD1-NC-Pad2)")
-	(net 42 "Net-(JLINK/SWD1-RTCK)")
-	(net 43 "/nRST")
-	(net 44 "Net-(JLINK/SWD1-DBGRQ)")
-	(net 45 "unconnected-(JLINK/SWD1-5V-Supply-Pad19)")
-	(net 46 "Net-(U1-BOOT0)")
-	(net 47 "Net-(SW2-B)")
-	(net 48 "Net-(U1-PD1_OSC_OUT)")
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x01_P2.54mm_Horizontal"
 		(layer "F.Cu")
 		(uuid "05bf66d6-50f7-4b1b-8feb-c6fa61201281")
@@ -154,7 +115,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -182,7 +143,14 @@
 		(path "/fb479f4c-a521-4da8-82ff-9f93caca4649")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -383,8 +351,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 38 "/JTCK{slash}SWCLK")
-			(pinfunction "Pin_1")
+			(net "/JTCK{slash}SWCLK")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "adc5d834-a989-43e4-9ffe-9fa202501ace")
 		)
@@ -429,7 +397,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -457,7 +425,14 @@
 		(path "/7df5ad7a-fa8d-4329-ac82-f83b93d77fed")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -658,13 +633,171 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 24 "Net-(J19-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J19-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "fcb8aa3b-b960-47f7-9d08-879dd9d4bb2d")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x01_P2.54mm_Horizontal.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "0c0e4208-6a22-4fc8-a842-d416108e0136")
+		(at 179.405 99.415)
+		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(tags "capacitor handsolder")
+		(property "Reference" "2.2µF2"
+			(at 0 -1.68 0)
+			(layer "F.SilkS")
+			(uuid "f0d70747-24d7-42cf-a493-f0abb0fa2760")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "C_Small_US"
+			(at 0 1.68 0)
+			(layer "F.Fab")
+			(uuid "f148cb02-77fb-4afb-8b13-8c3993229a84")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "010525af-b60e-496d-96ec-6b74e6895c15")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "fc86ccf0-3e55-4cfd-8de0-1e205279ab77")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "7ff6f6fd-7dae-403b-ab60-f81d99815528")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "C_*")
+		(path "/861eb3db-3aa6-402f-a6bb-e763d8998986/01ed258c-416b-40e3-b49a-e68835c013e0")
+		(sheetname "/PowerSupply/")
+		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.261252 -0.735)
+			(end 0.261252 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "19522f3c-ca59-4aed-8e39-f8aefba54885")
+		)
+		(fp_line
+			(start -0.261252 0.735)
+			(end 0.261252 0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "fa5ba05a-1c7d-48da-a653-c8c2b6ad0c56")
+		)
+		(fp_rect
+			(start -1.88 -0.98)
+			(end 1.88 0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d7b3406a-44b2-4143-bc15-5f72ed0a1be0")
+		)
+		(fp_rect
+			(start -1 -0.625)
+			(end 1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "1df17dc8-4d7e-4994-a7c8-447dc277d1f1")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "abeb7e0d-eaf6-4acf-a7ef-9187631ec914")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "/PowerSupply/USB_OUT_MCU_IN")
+			(pintype "passive")
+			(uuid "f3064031-6faf-41e5-b5b5-790e8eefe938")
+		)
+		(pad "2" smd roundrect
+			(at 1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "/PowerSupply/GND")
+			(pintype "passive")
+			(uuid "8b2761df-2e38-4cca-afe6-3ceb84651d45")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -704,7 +837,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -732,7 +865,14 @@
 		(path "/50884306-8a9a-4d6e-8775-4c0365f6cb6f")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -933,8 +1073,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 8 "Net-(J10-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J10-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "fe165fda-9726-4035-9d1c-9954dd7dceb8")
 		)
@@ -979,7 +1119,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1007,7 +1147,14 @@
 		(path "/83ea8148-bc22-46d2-ada6-f2dac1d7c9c8")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -1208,8 +1355,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 1 "Net-(J35-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J35-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "007b89ce-6aad-4032-b745-41793bcb8dc9")
 		)
@@ -1254,7 +1401,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1282,7 +1429,14 @@
 		(path "/2da76cca-4543-4229-a447-8e46c8e5043d")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -1483,8 +1637,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 21 "Net-(J28-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J28-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "c3a2a31b-dda6-42fd-a0af-db95417ba991")
 		)
@@ -1529,7 +1683,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -1557,7 +1711,14 @@
 		(path "/9b26f2ad-8709-4403-9b5a-d2eaa99b37f7")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -1758,8 +1919,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 4 "Net-(J7-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J7-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "7e2985cf-98ad-491a-a125-ded605bb0192")
 		)
@@ -1831,7 +1992,16 @@
 		(path "/3f99881e-ccd9-49b7-9d2c-5662a5f32161")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "3" "5" "7" "9" "11" "13" "15" "17" "19" "2" "4" "6" "8" "10"
+					"12" "14" "16" "18" "20"
+				)
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -4.68 -0.5)
 			(end -4.68 0.5)
@@ -2121,8 +2291,8 @@
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
 			(roundrect_rratio 0.147059)
-			(net 3 "VDD")
-			(pinfunction "VTref")
+			(net "VDD")
+			(pinfunction "VTref_1")
 			(pintype "passive")
 			(uuid "4e6ef176-b33b-4ed0-a42c-a7eb14d44575")
 		)
@@ -2132,8 +2302,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 41 "unconnected-(JLINK/SWD1-NC-Pad2)")
-			(pinfunction "NC")
+			(net "unconnected-(JLINK/SWD1-NC-Pad2)")
+			(pinfunction "NC_2")
 			(pintype "passive+no_connect")
 			(uuid "76b0b90e-a22a-4e41-959a-659ba96dd5d9")
 		)
@@ -2143,8 +2313,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 39 "/JNTRST")
-			(pinfunction "nTRST")
+			(net "/JNTRST")
+			(pinfunction "nTRST_3")
 			(pintype "passive")
 			(uuid "8612dc59-b163-4ddb-ac95-38ac271b12ad")
 		)
@@ -2154,8 +2324,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND")
+			(net "GNDREF")
+			(pinfunction "GND_4")
 			(pintype "passive")
 			(uuid "933dd123-d4a7-4f58-8cf8-f98ab48e5ca8")
 		)
@@ -2165,8 +2335,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 37 "/JTDI")
-			(pinfunction "TDI")
+			(net "/JTDI")
+			(pinfunction "TDI_5")
 			(pintype "passive")
 			(uuid "bd2ba8da-e386-48b7-8f43-2b7d418d2ef8")
 		)
@@ -2176,8 +2346,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND")
+			(net "GNDREF")
+			(pinfunction "GND_6")
 			(pintype "passive")
 			(uuid "f37c51be-2735-499c-8afe-8078960164f9")
 		)
@@ -2187,8 +2357,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 36 "/JTMS{slash}SWDIO")
-			(pinfunction "TMS/SWDIO")
+			(net "/JTMS{slash}SWDIO")
+			(pinfunction "TMS/SWDIO_7")
 			(pintype "passive")
 			(uuid "daef5441-083b-4879-97c4-f76b4d142c0c")
 		)
@@ -2198,8 +2368,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND")
+			(net "GNDREF")
+			(pinfunction "GND_8")
 			(pintype "passive")
 			(uuid "91e9bac0-1d82-4f41-b1e3-9099d15d77c0")
 		)
@@ -2209,8 +2379,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 38 "/JTCK{slash}SWCLK")
-			(pinfunction "TCK/SWCLK")
+			(net "/JTCK{slash}SWCLK")
+			(pinfunction "TCK/SWCLK_9")
 			(pintype "passive")
 			(uuid "72bd16d5-448c-45a6-8ddf-aada7b26ad6e")
 		)
@@ -2220,8 +2390,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND")
+			(net "GNDREF")
+			(pinfunction "GND_10")
 			(pintype "passive")
 			(uuid "282b9532-057f-43e0-93d4-48dfe61a7d50")
 		)
@@ -2231,8 +2401,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 42 "Net-(JLINK/SWD1-RTCK)")
-			(pinfunction "RTCK")
+			(net "Net-(JLINK/SWD1-RTCK)")
+			(pinfunction "RTCK_11")
 			(pintype "passive")
 			(uuid "01979131-2496-48d6-944d-82991ec001a3")
 		)
@@ -2242,8 +2412,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND")
+			(net "GNDREF")
+			(pinfunction "GND_12")
 			(pintype "passive")
 			(uuid "8d34ceae-81ed-4656-b69f-130f9c247628")
 		)
@@ -2253,8 +2423,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 40 "/JTDO")
-			(pinfunction "TDO/SWO")
+			(net "/JTDO")
+			(pinfunction "TDO/SWO_13")
 			(pintype "passive")
 			(uuid "4af7572d-fb02-4a6f-8b43-fe7d26d93fa9")
 		)
@@ -2264,8 +2434,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND*")
+			(net "GNDREF")
+			(pinfunction "GND*_14")
 			(pintype "passive")
 			(uuid "fa6e04bc-fafa-4333-bce4-73217590006b")
 		)
@@ -2275,8 +2445,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 43 "/nRST")
-			(pinfunction "RESET")
+			(net "/RST_IN")
+			(pinfunction "RESET_15")
 			(pintype "passive")
 			(uuid "6e7c8abe-3b65-437b-9493-dfb401d1ac25")
 		)
@@ -2286,8 +2456,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND*")
+			(net "GNDREF")
+			(pinfunction "GND*_16")
 			(pintype "passive")
 			(uuid "48867223-db65-4fa6-b72b-018d215ec402")
 		)
@@ -2297,8 +2467,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 44 "Net-(JLINK/SWD1-DBGRQ)")
-			(pinfunction "DBGRQ")
+			(net "Net-(JLINK/SWD1-DBGRQ)")
+			(pinfunction "DBGRQ_17")
 			(pintype "passive")
 			(uuid "4985e806-f9cb-4e49-a4e8-535649b5d14a")
 		)
@@ -2308,8 +2478,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND*")
+			(net "GNDREF")
+			(pinfunction "GND*_18")
 			(pintype "passive")
 			(uuid "0c8d908c-4217-46cb-bfd8-14c3bbf8231e")
 		)
@@ -2319,8 +2489,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 45 "unconnected-(JLINK/SWD1-5V-Supply-Pad19)")
-			(pinfunction "5V-Supply")
+			(net "unconnected-(JLINK/SWD1-5V-Supply-Pad19)")
+			(pinfunction "5V-Supply_19")
 			(pintype "passive+no_connect")
 			(uuid "b037bad0-da76-4491-ac85-7d4ad64fcffd")
 		)
@@ -2330,8 +2500,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 33 "GNDREF")
-			(pinfunction "GND*")
+			(net "GNDREF")
+			(pinfunction "GND*_20")
 			(pintype "passive")
 			(uuid "29eae9d4-284d-4cd1-8db8-99c1f3416d04")
 		)
@@ -2376,7 +2546,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2404,7 +2574,14 @@
 		(path "/c17825d0-4e3c-4ef5-9fd1-2400b7974482")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -2605,8 +2782,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 28 "Net-(J18-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J18-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "ff9d0669-cfb7-495a-89e2-8b3b81a07bb4")
 		)
@@ -2651,7 +2828,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2679,7 +2856,14 @@
 		(path "/8693e362-6360-4634-87f8-a0cc6e3d11ba")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -2880,13 +3064,171 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 14 "Net-(J6-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J6-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "7b3944bf-65f1-450c-95e9-89dacf2c5509")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x01_P2.54mm_Horizontal.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "346861b6-74c3-4e1d-bfc4-02fb57e74bc5")
+		(at 179.405 102.425)
+		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(tags "capacitor handsolder")
+		(property "Reference" "560pF1"
+			(at 0 -1.68 0)
+			(layer "F.SilkS")
+			(uuid "63dce3e8-fea9-460e-afc6-183abd10e71a")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "C_Small_US"
+			(at 0 1.68 0)
+			(layer "F.Fab")
+			(uuid "878b9d4f-d834-42d3-bfdb-883e2e2991c6")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "665c397f-4e3c-4314-ae7b-78e0a1f1bdfc")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "4aa382bc-9404-47fe-bbe4-e2cc1b289029")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "8573669e-0874-417e-983c-710c4054d1f3")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "C_*")
+		(path "/861eb3db-3aa6-402f-a6bb-e763d8998986/2c501149-91d8-480d-b5fd-4791dc34ccd8")
+		(sheetname "/PowerSupply/")
+		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.261252 -0.735)
+			(end 0.261252 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "17bc120c-bfa3-4696-97ed-142b41210ee1")
+		)
+		(fp_line
+			(start -0.261252 0.735)
+			(end 0.261252 0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "4c53395c-7417-40bb-80f0-30e17e2a0e14")
+		)
+		(fp_rect
+			(start -1.88 -0.98)
+			(end 1.88 0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "189210cf-4266-4d44-9f8e-0167964cc7f0")
+		)
+		(fp_rect
+			(start -1 -0.625)
+			(end 1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "c24caf09-51eb-43a3-9de0-92c07aee1ff5")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "3caa6f5e-d0bc-42c0-8d49-9ccba68f8678")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "Net-(U2-CFF)")
+			(pintype "passive")
+			(uuid "0d46e855-46d0-4fd5-9df6-6a3d40f60c6e")
+		)
+		(pad "2" smd roundrect
+			(at 1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "/PowerSupply/USB_OUT_MCU_IN")
+			(pintype "passive")
+			(uuid "f2789930-fc74-4bd7-bc07-096d0c1546cd")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -2926,7 +3268,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -2954,7 +3296,14 @@
 		(path "/b6969d55-0bd9-4cc0-a2fa-c75a1b87a616")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -3155,8 +3504,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 16 "Net-(J40-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J40-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "178c696b-f34b-4180-b62c-d76070264796")
 		)
@@ -3201,7 +3550,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3229,7 +3578,14 @@
 		(path "/a12706b3-42d2-4be9-b866-430e15b86869")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -3430,8 +3786,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 27 "Net-(J25-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J25-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "b7be60ba-4cc9-4935-9290-fbfe91e44c2e")
 		)
@@ -3476,7 +3832,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3504,7 +3860,14 @@
 		(path "/12cd4293-7cce-46ff-9df5-7c6b625abd2c")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.410242 -0.56)
 			(end 0.410242 -0.56)
@@ -3563,7 +3926,7 @@
 			(size 1.05 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.238095)
-			(net 3 "VDD")
+			(net "VDD")
 			(pintype "passive")
 			(uuid "c4f1cd3b-d516-4a08-94a9-d3f697f575c2")
 		)
@@ -3572,7 +3935,7 @@
 			(size 1.05 1.2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.238095)
-			(net 32 "Net-(U1-VDDA)")
+			(net "Net-(U1-VDDA)")
 			(pintype "passive")
 			(uuid "52a039db-ac4f-47da-a212-34791b250f45")
 		)
@@ -3617,7 +3980,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3645,7 +4008,14 @@
 		(path "/3d898ddf-5f57-4650-a839-02669489ab52")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -3846,8 +4216,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 36 "/JTMS{slash}SWDIO")
-			(pinfunction "Pin_1")
+			(net "/JTMS{slash}SWDIO")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "78319a6e-b9eb-4612-9f80-deef9ad1ccdd")
 		)
@@ -3892,7 +4262,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -3920,7 +4290,14 @@
 		(path "/8adc16a3-6367-4b49-bd23-3cacac7aceb5")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -4121,8 +4498,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 26 "Net-(J30-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J30-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "380b788d-944c-47fd-a886-caf74b662cac")
 		)
@@ -4167,7 +4544,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4195,7 +4572,14 @@
 		(path "/c03e116c-2a3a-4a17-8ffd-c7a6b72b6645")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -4396,8 +4780,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 11 "Net-(J8-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J8-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "3e8ae29c-d507-4845-ae21-16e64e3b50f4")
 		)
@@ -4442,7 +4826,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4470,7 +4854,14 @@
 		(path "/f25e4079-3450-4f63-8175-6b3766d4acdb")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.261252 -0.735)
 			(end 0.261252 -0.735)
@@ -4529,7 +4920,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 32 "Net-(U1-VDDA)")
+			(net "Net-(U1-VDDA)")
 			(pintype "passive")
 			(uuid "aee775ca-b28a-4b4e-9c7d-6525b53d3654")
 		)
@@ -4538,7 +4929,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 33 "GNDREF")
+			(net "GNDREF")
 			(pintype "passive")
 			(uuid "41b6658e-07fc-4a01-84f8-e9f56377efe2")
 		)
@@ -4583,7 +4974,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4611,7 +5002,14 @@
 		(path "/9adae8f3-e0bd-45a4-ad80-5fec56c213fa")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -4812,8 +5210,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 37 "/JTDI")
-			(pinfunction "Pin_1")
+			(net "/JTDI")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "f1b812f7-768b-49bd-b7ea-bbe7b827eb7e")
 		)
@@ -4858,7 +5256,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -4886,7 +5284,14 @@
 		(path "/b83d62f7-499a-4a66-b38e-7613a6926c45")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -5087,8 +5492,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 20 "Net-(J3-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J3-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "6b4a7ca0-6e4c-4a42-8e9d-d8afae7dddef")
 		)
@@ -5133,7 +5538,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5161,7 +5566,14 @@
 		(path "/3884adb4-87c9-45f5-8dbc-16b9e1a0eef1")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -5362,8 +5774,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 15 "Net-(J34-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J34-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "eb14669d-cef4-40e6-ae7e-2d108a4a7d2a")
 		)
@@ -5408,7 +5820,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5436,7 +5848,14 @@
 		(path "/3d4ee66f-ac96-405d-8095-e26fdba42a69")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -5637,8 +6056,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 39 "/JNTRST")
-			(pinfunction "Pin_1")
+			(net "/JNTRST")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "ca9b0e98-37cd-4ae4-bcbf-0f537562a807")
 		)
@@ -5683,7 +6102,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5711,7 +6130,14 @@
 		(path "/20ae0f41-a9bb-4865-85ad-30361b3804c1")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -5912,8 +6338,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 40 "/JTDO")
-			(pinfunction "Pin_1")
+			(net "/JTDO")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "48a55d9f-dce7-4f1d-97a6-dad4980cb4a8")
 		)
@@ -5958,7 +6384,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -5986,7 +6412,14 @@
 		(path "/5e274f74-6912-4c54-9fd7-44329b2a761a")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.227064 -0.735)
 			(end 0.227064 -0.735)
@@ -6045,7 +6478,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 44 "Net-(JLINK/SWD1-DBGRQ)")
+			(net "Net-(JLINK/SWD1-DBGRQ)")
 			(pintype "passive")
 			(uuid "d9be978f-d736-4825-b466-cce4596f4ae3")
 		)
@@ -6054,7 +6487,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 33 "GNDREF")
+			(net "GNDREF")
 			(pintype "passive")
 			(uuid "fe1a70bd-b808-4e2d-8893-db2a33a987a6")
 		)
@@ -6099,7 +6532,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6127,7 +6560,14 @@
 		(path "/3f08d42e-c590-4f9a-bfa0-08317a32f105")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
-		(attr smd)
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd dnp)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.261252 -0.735)
 			(end 0.261252 -0.735)
@@ -6186,7 +6626,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 32 "Net-(U1-VDDA)")
+			(net "Net-(U1-VDDA)")
 			(pintype "passive")
 			(uuid "4f505212-5160-49ad-9a97-0472a4b2aa8a")
 		)
@@ -6195,7 +6635,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 33 "GNDREF")
+			(net "GNDREF")
 			(pintype "passive")
 			(uuid "081fd8db-8602-4a72-ba6e-d13e87fe5d39")
 		)
@@ -6240,7 +6680,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6268,7 +6708,14 @@
 		(path "/c32d3c75-51a3-4571-9fa4-6b3615df86ce")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -6469,8 +6916,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 25 "Net-(J9-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J9-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "aa1dd925-ce6e-4ffc-951e-19209c2bd426")
 		)
@@ -6515,7 +6962,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6543,7 +6990,14 @@
 		(path "/8341e6ae-abfd-4934-af34-a24a6e71f0ff")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -6744,8 +7198,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 22 "Net-(J38-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J38-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "591b471d-f884-432e-9817-ce7ac480340c")
 		)
@@ -6790,7 +7244,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6818,7 +7272,14 @@
 		(path "/fc5ef715-d767-46cc-8771-cfe9b504f857")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.261252 -0.735)
 			(end 0.261252 -0.735)
@@ -6877,7 +7338,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 33 "GNDREF")
+			(net "GNDREF")
 			(pintype "passive")
 			(uuid "bca45f80-ca16-4169-9f12-e8807abadcd9")
 		)
@@ -6886,7 +7347,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 35 "Net-(C5-Pad2)")
+			(net "Net-(C5-Pad2)")
 			(pintype "passive")
 			(uuid "844bef75-8698-4ad2-84f3-ec950580088a")
 		)
@@ -6931,7 +7392,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -6959,7 +7420,14 @@
 		(path "/db8e784c-8ecf-4f7a-94a5-6ca6c51bec1f")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.227064 -0.735)
 			(end 0.227064 -0.735)
@@ -7018,7 +7486,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 42 "Net-(JLINK/SWD1-RTCK)")
+			(net "Net-(JLINK/SWD1-RTCK)")
 			(pintype "passive")
 			(uuid "9c5cd9e1-d33a-44f6-82d2-ea96b6a4d5de")
 		)
@@ -7027,12 +7495,572 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 33 "GNDREF")
+			(net "GNDREF")
 			(pintype "passive")
 			(uuid "7d7387ee-16ce-4e69-92cd-bcc3ce730bc5")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Connector_PinHeader_1.00mm:PinHeader_1x02_P1.00mm_Horizontal"
+		(layer "F.Cu")
+		(uuid "7cf87495-29aa-4ad1-addc-514feb1d57f8")
+		(at 190.245 96.425)
+		(descr "Through hole angled pin header, 1x02, 1.00mm pitch, 2.0mm pin length, single row")
+		(tags "Through hole angled pin header THT 1x02 1.00mm single row")
+		(property "Reference" "J21"
+			(at 1.375 -1.5 0)
+			(layer "F.SilkS")
+			(uuid "0cea2a04-d1e4-402e-80d8-cfedefe22392")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "Conn_01x02_Pin"
+			(at 1.375 2.5 0)
+			(layer "F.Fab")
+			(uuid "7e8c4635-6043-499b-8525-00e94828ff93")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5f18f219-3cc7-4f72-9d7e-263b343680df")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Generic connector, single row, 01x02, script generated"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "70a8de56-abf7-4995-861a-7735cf8c0674")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "connector/pin_header_socket"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b864dbdc-d5c9-4a86-a763-db6b123956dc")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Connector*:*_1x??_*")
+		(path "/2b6517f7-bba1-4cfc-9827-31f440d1bb47")
+		(sheetname "/")
+		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.735 -0.735)
+			(end 0 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "3c3465fc-9831-4ff2-a6ed-db080c2faf57")
+		)
+		(fp_line
+			(start -0.735 0)
+			(end -0.735 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "5a8f89d2-80a5-4c16-888c-fde5f9078ff9")
+		)
+		(fp_line
+			(start 0.735 -0.61)
+			(end 1.36 -0.61)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "e466f90b-550f-4bbe-877e-b8b70068af80")
+		)
+		(fp_line
+			(start 0.735 0.5)
+			(end 1.36 0.5)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "786bfd41-0061-4683-8b46-dfe19a5d7ed2")
+		)
+		(fp_line
+			(start 1.36 -0.61)
+			(end 1.36 1.61)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "321fb9c0-d273-400f-b0bd-d7acd08f04ac")
+		)
+		(fp_line
+			(start 1.36 0.74)
+			(end 3.36 0.74)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "111bb96e-1f7c-4ff4-8ade-e302d7d0e0ad")
+		)
+		(fp_line
+			(start 1.36 1.61)
+			(end 0.41003 1.61)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "46cdc972-e57f-478b-a2a0-683ab684aa85")
+		)
+		(fp_line
+			(start 3.36 0.74)
+			(end 3.36 1.26)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "03966409-478a-4f8e-825e-5c789b764a40")
+		)
+		(fp_line
+			(start 3.36 1.26)
+			(end 1.36 1.26)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "288c5ac6-c09b-45b7-bafa-972f63cdda93")
+		)
+		(fp_rect
+			(start 1.36 -0.26)
+			(end 3.36 0.26)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(fill yes)
+			(layer "F.SilkS")
+			(uuid "c5e9359b-e695-4d0c-a058-c92416fb3009")
+		)
+		(fp_rect
+			(start -1 -1)
+			(end 3.75 2)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "909d65c4-39e0-4fa1-882f-e09ae933926e")
+		)
+		(fp_line
+			(start -0.15 -0.15)
+			(end -0.15 0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "8e87831d-bd6a-4fec-8f09-51f11aa1bf6e")
+		)
+		(fp_line
+			(start -0.15 -0.15)
+			(end 0.25 -0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "8c26d0c3-a894-4a89-8ea5-3e5062035315")
+		)
+		(fp_line
+			(start -0.15 0.15)
+			(end 0.25 0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9c12333b-8c05-4418-b32f-2dccd3e90a93")
+		)
+		(fp_line
+			(start -0.15 0.85)
+			(end -0.15 1.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "ae5fd3e2-2152-4c68-95c6-18af381b8017")
+		)
+		(fp_line
+			(start -0.15 0.85)
+			(end 0.25 0.85)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "61f90750-194a-419c-b0fa-4e3165205d8e")
+		)
+		(fp_line
+			(start -0.15 1.15)
+			(end 0.25 1.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "397b4b38-1f0d-4699-98df-8fce4800c314")
+		)
+		(fp_line
+			(start 0.25 -0.25)
+			(end 0.5 -0.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "c6e85687-0173-40d7-9319-5d23e796f242")
+		)
+		(fp_line
+			(start 0.25 1.5)
+			(end 0.25 -0.25)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "b7c03773-e35a-425c-8e00-66f016ba6b30")
+		)
+		(fp_line
+			(start 0.5 -0.5)
+			(end 1.25 -0.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "6553295e-0226-49e4-b279-2fa04919b103")
+		)
+		(fp_line
+			(start 1.25 -0.5)
+			(end 1.25 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "cd9ab0c3-b878-40df-bb67-323e3f676a70")
+		)
+		(fp_line
+			(start 1.25 -0.15)
+			(end 3.25 -0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "99d98555-0e3e-4a32-a612-7d4b0e8c49ed")
+		)
+		(fp_line
+			(start 1.25 0.15)
+			(end 3.25 0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "e7fb2a27-e14b-45cf-8202-db56b38a240d")
+		)
+		(fp_line
+			(start 1.25 0.85)
+			(end 3.25 0.85)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "75157b31-c515-47be-80ce-a49df16f37af")
+		)
+		(fp_line
+			(start 1.25 1.15)
+			(end 3.25 1.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "d7607d45-4a82-475b-b6dc-87cc5daa1156")
+		)
+		(fp_line
+			(start 1.25 1.5)
+			(end 0.25 1.5)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9da8276c-d29f-4d23-999a-1a662d0571ed")
+		)
+		(fp_line
+			(start 3.25 -0.15)
+			(end 3.25 0.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "623bfc13-25ba-442f-911f-c0dc96454853")
+		)
+		(fp_line
+			(start 3.25 0.85)
+			(end 3.25 1.15)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(layer "F.Fab")
+			(uuid "9367aedd-079f-49c6-8033-8fd419598989")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0.75 0.5 90)
+			(layer "F.Fab")
+			(uuid "af0d0fde-1979-4199-b645-ed0e99831352")
+			(effects
+				(font
+					(size 0.6 0.6)
+					(thickness 0.09)
+				)
+			)
+		)
+		(pad "1" thru_hole rect
+			(at 0 0)
+			(size 0.85 0.85)
+			(drill 0.5)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "VDD")
+			(pinfunction "Pin_1_1")
+			(pintype "passive")
+			(uuid "61682db7-bb6d-4dcb-ac2f-4f06a56c4660")
+		)
+		(pad "2" thru_hole circle
+			(at 0 1)
+			(size 0.85 0.85)
+			(drill 0.5)
+			(layers "*.Cu" "*.Mask")
+			(remove_unused_layers no)
+			(net "/BOOT_IN")
+			(pinfunction "Pin_2_2")
+			(pintype "passive")
+			(uuid "e2894b62-dafe-4d0d-aeba-253ffe526cb4")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Connector_PinHeader_1.00mm.3dshapes/PinHeader_1x02_P1.00mm_Horizontal.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "7d78726e-029e-4369-add4-d4e340f73760")
+		(at 179.405 96.405)
+		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
+		(tags "capacitor handsolder")
+		(property "Reference" "2.2µF1"
+			(at 0 -1.68 0)
+			(layer "F.SilkS")
+			(uuid "54cc81b0-b4b9-4292-ad6a-513b80c84aef")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "C_Small_US"
+			(at 0 1.68 0)
+			(layer "F.Fab")
+			(uuid "6fa03d65-d206-43d1-bbee-9c077ce6c797")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "3d09b273-1f24-48ca-8c5c-b213878fd654")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "capacitor, small US symbol"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "875eba2f-248c-4439-9b21-727263f174d1")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "5213db2a-2e52-4caa-8ebb-5241662ad9de")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "C_*")
+		(path "/861eb3db-3aa6-402f-a6bb-e763d8998986/5ca50e9f-399d-45d4-ac32-d7a4c2dc5ec7")
+		(sheetname "/PowerSupply/")
+		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.261252 -0.735)
+			(end 0.261252 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "1c4abc6f-e5e7-4d60-a4bd-4f77cf55e208")
+		)
+		(fp_line
+			(start -0.261252 0.735)
+			(end 0.261252 0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "a4d4940e-7b32-4cbc-a452-b07338f7ef30")
+		)
+		(fp_rect
+			(start -1.88 -0.98)
+			(end 1.88 0.98)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "2da7ef1d-6a20-4dab-8d51-cbbfd9f1136c")
+		)
+		(fp_rect
+			(start -1 -0.625)
+			(end 1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "623a5d8e-865b-4df8-9e00-d6d6556735c1")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "c051103e-c026-4e80-8fad-aa97f1665b28")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "/PowerSupply/V_IN")
+			(pintype "passive")
+			(uuid "3fb71ccf-dc46-4bd7-a764-96ce2af89f76")
+		)
+		(pad "2" smd roundrect
+			(at 1.0375 0)
+			(size 1.175 1.45)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.212766)
+			(net "/PowerSupply/GND")
+			(pintype "passive")
+			(uuid "c3f3d855-013b-4afd-90da-c73408ab108d")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Capacitor_SMD.3dshapes/C_0805_2012Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -7072,7 +8100,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7100,7 +8128,14 @@
 		(path "/516c9a80-59f0-4930-9eba-b434d3465ff6")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -7301,8 +8336,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 31 "Net-(J12-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J12-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "63abe6ed-2ffb-472e-9f18-208ac5327f42")
 		)
@@ -7347,7 +8382,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7375,7 +8410,14 @@
 		(path "/1904efca-2d75-4499-ac4a-d6e93743238c")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -7576,8 +8618,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 19 "Net-(J31-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J31-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "8161d991-fbda-493e-8d03-b6fc34b8059b")
 		)
@@ -7647,10 +8689,10 @@
 			)
 		)
 		(property ki_fp_filters "R_*")
-		(path "/53b3ca04-a1b7-469f-a515-0c86cbd43ce3")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.227064 -0.735)
 			(end 0.227064 -0.735)
@@ -7709,7 +8751,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 47 "Net-(SW2-B)")
+			(net "Net-(SW2-B)")
 			(pintype "passive")
 			(uuid "64591a56-59ac-479b-8d50-20a142c36b4c")
 		)
@@ -7718,7 +8760,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 46 "Net-(U1-BOOT0)")
+			(net "Net-(U1-BOOT0)")
 			(pintype "passive")
 			(uuid "295b4821-b97c-4c8d-ad3f-fb21e60e3d87")
 		)
@@ -7763,7 +8805,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -7791,7 +8833,14 @@
 		(path "/b60108b2-d457-453e-ae42-13f6d17f4484")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -7992,8 +9041,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 23 "Net-(J39-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J39-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "202823a5-389c-45c3-b49c-a0350146f2cc")
 		)
@@ -8038,7 +9087,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8066,7 +9115,14 @@
 		(path "/0814fa81-00cb-4d93-b672-4be91d922c77")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -8267,8 +9323,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 2 "Net-(J4-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J4-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "2217a13c-ecce-4e6e-b9b2-d56d14be19b9")
 		)
@@ -8313,7 +9369,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8341,7 +9397,14 @@
 		(path "/695097b2-8302-45d5-b31a-fe1f893cc50e")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.227064 -0.735)
 			(end 0.227064 -0.735)
@@ -8400,7 +9463,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 35 "Net-(C5-Pad2)")
+			(net "Net-(C5-Pad2)")
 			(pintype "passive")
 			(uuid "907a65c5-0102-47f3-b5a2-b1e60ca37f38")
 		)
@@ -8409,7 +9472,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 48 "Net-(U1-PD1_OSC_OUT)")
+			(net "Net-(U1-PD1_OSC_OUT)")
 			(pintype "passive")
 			(uuid "b6d0526c-b7ac-460e-b71e-52dccbfa5282")
 		)
@@ -8454,7 +9517,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8482,7 +9545,14 @@
 		(path "/3b5607d5-a563-4e8c-8d84-e32ad08c0418")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -8683,8 +9753,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 17 "Net-(J1-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J1-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "6e27fce5-9fc9-4e0f-826f-86907c4e883d")
 		)
@@ -8729,7 +9799,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -8757,7 +9827,14 @@
 		(path "/b7e08ca9-cb43-4e6a-a76a-abab8d5256b3")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -8958,13 +10035,171 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 5 "Net-(J11-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J11-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "60590576-26d8-4bf9-908f-eec9468528ff")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Connector_PinHeader_2.54mm.3dshapes/PinHeader_1x01_P2.54mm_Horizontal.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Inductor_SMD:L_0805_2012Metric_Pad1.05x1.20mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "a4e874c5-6a82-473e-99bf-57a6e500c894")
+		(at 184.265 96.275)
+		(descr "Inductor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 80, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(tags "inductor handsolder")
+		(property "Reference" "1µH1"
+			(at 0 -1.55 0)
+			(layer "F.SilkS")
+			(uuid "a8d68697-0e19-4bb2-9000-9a63797f316c")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "L_Small"
+			(at 0 1.55 0)
+			(layer "F.Fab")
+			(uuid "151cdaff-679b-4f29-b795-989eb4a8b406")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "101093d2-ff43-4404-baa0-f7f1edda1921")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Inductor, small symbol"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "5c4cf638-a25e-4b24-b459-e9477b8a70e6")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "b4f508c7-0c35-409c-a3c2-6e70d6c04379")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "Choke_* *Coil* Inductor_* L_*")
+		(path "/861eb3db-3aa6-402f-a6bb-e763d8998986/9528f5d2-d1a8-4016-b4b8-7e670b9050e3")
+		(sheetname "/PowerSupply/")
+		(sheetfile "PowerSupply.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.410242 -0.56)
+			(end 0.410242 -0.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "da04a486-dff0-4272-bbdc-2cfe172318fa")
+		)
+		(fp_line
+			(start -0.410242 0.56)
+			(end 0.410242 0.56)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "be7b666e-317b-4e96-83ab-8f42b85c37ff")
+		)
+		(fp_rect
+			(start -1.93 -0.85)
+			(end 1.93 0.85)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "742edbd7-42b5-46dd-84b4-44f6f8429cf8")
+		)
+		(fp_rect
+			(start -1 -0.45)
+			(end 1 0.45)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "14e548e2-01c2-46b2-913e-aa3f74d76107")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "eeb05bbf-2f36-48d9-891b-b2c7f02a40b3")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1.15 0)
+			(size 1.05 1.2)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.238095)
+			(net "/PowerSupply/USB_OUT_MCU_IN")
+			(pintype "passive")
+			(uuid "b14c938d-edec-4c4d-9bd0-b03a0179c629")
+		)
+		(pad "2" smd roundrect
+			(at 1.15 0)
+			(size 1.05 1.2)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.238095)
+			(net "Net-(U2-SW)")
+			(pintype "passive")
+			(uuid "0af19082-c9ae-485e-8244-f963af90cd48")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Inductor_SMD.3dshapes/L_0805_2012Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -9004,7 +10239,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9032,7 +10267,14 @@
 		(path "/89736166-bcf6-4a14-bf2f-eedf2bd4a7f6")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -9233,8 +10475,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 29 "Net-(J2-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J2-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "d08c14c9-f331-473d-a886-b026675fa137")
 		)
@@ -9279,7 +10521,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9307,7 +10549,14 @@
 		(path "/bdac0225-bd57-4b7b-aee7-ea0d1cead1f4")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -9508,8 +10757,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 7 "Net-(J5-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J5-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "97ef3f29-6da6-419a-acad-c2488382ce36")
 		)
@@ -9554,7 +10803,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9582,7 +10831,14 @@
 		(path "/c0b3a69e-6c91-460c-b2d7-eab424572d6c")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -9783,8 +11039,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 13 "Net-(J27-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J27-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "f7e0dc63-b1ff-416c-9efb-732524e04eed")
 		)
@@ -9829,7 +11085,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -9857,7 +11113,14 @@
 		(path "/83d050b6-85a6-4d5e-8ebe-24dcce31791b")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -10058,8 +11321,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 9 "Net-(J17-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J17-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "aa40aa51-ac65-4f47-a0bc-010e29eeb81e")
 		)
@@ -10103,7 +11366,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10131,7 +11394,14 @@
 		(path "/13ed6fa5-8991-4771-b36c-22243ba43262")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -10.135 -2.61)
 			(end -10.135 2.61)
@@ -10242,8 +11512,8 @@
 			(size 7.875 2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.125)
-			(net 35 "Net-(C5-Pad2)")
-			(pinfunction "1")
+			(net "Net-(C5-Pad2)")
+			(pinfunction "1_1")
 			(pintype "passive")
 			(uuid "e71511ad-8926-43f8-976e-350282720538")
 		)
@@ -10252,8 +11522,8 @@
 			(size 7.875 2)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.125)
-			(net 34 "Net-(U1-PD0_OSC_IN)")
-			(pinfunction "2")
+			(net "Net-(U1-PD0_OSC_IN)")
+			(pinfunction "2_2")
 			(pintype "passive")
 			(uuid "cb8fae40-82e0-457c-abf7-71cdd8ecc349")
 		)
@@ -10298,7 +11568,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10326,7 +11596,14 @@
 		(path "/5c71d850-25e1-4bbe-ad20-3db685fe52ea")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -10527,8 +11804,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 6 "Net-(J13-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J13-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "40c3ee3e-b94d-4022-a6aa-ff58120edf50")
 		)
@@ -10573,7 +11850,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10601,7 +11878,14 @@
 		(path "/bb1f6c6d-73dc-4189-aedf-31b9ada1e2cd")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.227064 -0.735)
 			(end 0.227064 -0.735)
@@ -10660,7 +11944,7 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 3 "VDD")
+			(net "VDD")
 			(pintype "passive")
 			(uuid "8c7d56cb-d5e7-4cb2-bb14-b3befeb6084e")
 		)
@@ -10669,12 +11953,170 @@
 			(size 1.2 1.4)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.208333)
-			(net 43 "/nRST")
+			(net "/RST_IN")
 			(pintype "passive")
 			(uuid "773711c8-b95f-41e3-b09b-a8628c367ca3")
 		)
 		(embedded_fonts no)
 		(model "${KICAD9_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
+			(offset
+				(xyz 0 0 0)
+			)
+			(scale
+				(xyz 1 1 1)
+			)
+			(rotate
+				(xyz 0 0 0)
+			)
+		)
+	)
+	(footprint "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+		(layer "F.Cu")
+		(uuid "c4b6a262-1e3f-4d44-b89c-83ee54ae5140")
+		(at 191.095 100.425)
+		(descr "Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal with elongated pad for handsoldering. (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
+		(tags "resistor handsolder")
+		(property "Reference" "R2"
+			(at 0 -1.65 0)
+			(layer "F.SilkS")
+			(uuid "a0bfe9d3-27b3-4d7c-94bb-66a5842dfecf")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Value" "10kΩ"
+			(at 0 1.65 0)
+			(layer "F.Fab")
+			(uuid "d2f2a482-6c61-40b8-8559-7667b578e7d4")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "2ae4e30f-76ec-40ca-bea0-cd5245bd0234")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor, US symbol"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(hide yes)
+			(uuid "c5b8dcbc-e8c3-45ce-adfc-777b1aacb303")
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "KiLib_Generator" "SMD_2terminal_chip_molded"
+			(at 0 0 0)
+			(layer "F.SilkS")
+			(hide yes)
+			(uuid "c3d3168e-667a-417e-b498-d673180c7f0d")
+			(effects
+				(font
+					(size 1 1)
+					(thickness 0.15)
+				)
+			)
+		)
+		(property ki_fp_filters "R_*")
+		(path "/8b3913c9-3539-4356-aa59-b56bf40c843f")
+		(sheetname "/")
+		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
+		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
+		(fp_line
+			(start -0.227064 -0.735)
+			(end 0.227064 -0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "1715a32f-679a-4b94-8c5d-75b74a192ce8")
+		)
+		(fp_line
+			(start -0.227064 0.735)
+			(end 0.227064 0.735)
+			(stroke
+				(width 0.12)
+				(type solid)
+			)
+			(layer "F.SilkS")
+			(uuid "632a445f-01dd-49a5-b362-952221e215d4")
+		)
+		(fp_rect
+			(start -1.85 -0.95)
+			(end 1.85 0.95)
+			(stroke
+				(width 0.05)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.CrtYd")
+			(uuid "d92698f8-fb92-4126-ab67-bbc7e61bc75e")
+		)
+		(fp_rect
+			(start -1 -0.625)
+			(end 1 0.625)
+			(stroke
+				(width 0.1)
+				(type solid)
+			)
+			(fill no)
+			(layer "F.Fab")
+			(uuid "215f9e36-46f9-4bea-8072-889ea5a7ead3")
+		)
+		(fp_text user "${REFERENCE}"
+			(at 0 0 0)
+			(layer "F.Fab")
+			(uuid "6f65b38b-6c8d-4ff9-92ac-06e87b1c07fa")
+			(effects
+				(font
+					(size 0.5 0.5)
+					(thickness 0.08)
+				)
+			)
+		)
+		(pad "1" smd roundrect
+			(at -1 0)
+			(size 1.2 1.4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.208333)
+			(net "GNDREF")
+			(pintype "passive")
+			(uuid "fef42897-2d1a-4bdd-a93f-87e508ded63f")
+		)
+		(pad "2" smd roundrect
+			(at 1 0)
+			(size 1.2 1.4)
+			(layers "F.Cu" "F.Mask" "F.Paste")
+			(roundrect_rratio 0.208333)
+			(net "/BOOT_IN")
+			(pintype "passive")
+			(uuid "dcc019a8-6a55-4e9f-aa9d-31446f8cc887")
+		)
+		(embedded_fonts no)
+		(model "${KICAD10_3DMODEL_DIR}/Resistor_SMD.3dshapes/R_0805_2012Metric.step"
 			(offset
 				(xyz 0 0 0)
 			)
@@ -10714,7 +12156,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -10742,7 +12184,14 @@
 		(path "/7e91293e-30ee-461e-bde7-9ff24108d185")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -10943,8 +12392,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 18 "Net-(J32-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J32-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "5d33f88a-3cd3-4fb5-9c44-7f4b47e7fae6")
 		)
@@ -10989,7 +12438,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11017,7 +12466,14 @@
 		(path "/8703f24b-8d06-4f73-9dab-4be806eab5e2")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.261252 -0.735)
 			(end 0.261252 -0.735)
@@ -11076,7 +12532,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 34 "Net-(U1-PD0_OSC_IN)")
+			(net "Net-(U1-PD0_OSC_IN)")
 			(pintype "passive")
 			(uuid "271244b4-9b65-470b-a9f7-607a47d166be")
 		)
@@ -11085,7 +12541,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 33 "GNDREF")
+			(net "GNDREF")
 			(pintype "passive")
 			(uuid "92508676-f1da-4e6d-ba74-cc81f2d3cea9")
 		)
@@ -11130,7 +12586,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11158,7 +12614,14 @@
 		(path "/bbeb1446-3758-4c09-b420-3cb678eb20ef")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -11359,8 +12822,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 12 "Net-(J29-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J29-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "3409b67a-7d53-4088-b80d-209194156cd8")
 		)
@@ -11405,7 +12868,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11433,7 +12896,14 @@
 		(path "/325b545d-bf08-41ec-b4f1-609eb2bd45a6")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1" "2")
+			)
+		)
 		(attr smd)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -0.261252 -0.735)
 			(end 0.261252 -0.735)
@@ -11492,7 +12962,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 3 "VDD")
+			(net "VDD")
 			(pintype "passive")
 			(uuid "6147d9ea-73a2-406b-b64a-4150bbbd3fc6")
 		)
@@ -11501,7 +12971,7 @@
 			(size 1.175 1.45)
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(roundrect_rratio 0.212766)
-			(net 33 "GNDREF")
+			(net "GNDREF")
 			(pintype "passive")
 			(uuid "8edaccb3-eea1-4969-acab-788b1c29f44c")
 		)
@@ -11546,7 +13016,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11574,7 +13044,14 @@
 		(path "/60fca02b-b815-4350-88fb-37833fa1846c")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -11775,8 +13252,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 30 "Net-(J26-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J26-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "5719825b-52e2-4b9b-872d-2d3141a3dd2f")
 		)
@@ -11821,7 +13298,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" ""
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
@@ -11849,7 +13326,14 @@
 		(path "/c481517c-118e-4030-ae3f-e8a0108cb90d")
 		(sheetname "/")
 		(sheetfile "STM32F103C8_breakout.kicad_sch")
+		(units
+			(unit
+				(name "A")
+				(pins "1")
+			)
+		)
 		(attr through_hole)
+		(duplicate_pad_numbers_are_jumpers no)
 		(fp_line
 			(start -1.27 -1.27)
 			(end 0 -1.27)
@@ -12050,8 +13534,8 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net 10 "Net-(J33-Pin_1)")
-			(pinfunction "Pin_1")
+			(net "Net-(J33-Pin_1)")
+			(pinfunction "Pin_1_1")
 			(pintype "passive")
 			(uuid "74a6728f-e511-4267-bf9b-e3d225057e38")
 		)
