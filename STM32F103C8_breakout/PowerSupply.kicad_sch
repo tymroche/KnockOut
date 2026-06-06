@@ -1802,7 +1802,7 @@
 		)
 		(uuid "0df45d76-1de7-4941-b14e-139e945be31c")
 	)
-	(label "USB_OUT_MCU_IN"
+	(label "Vdd"
 		(at 227.33 72.39 0)
 		(effects
 			(font
@@ -2036,7 +2036,7 @@
 				)
 			)
 		)
-		(property "Footprint" "MLF-8_ML_MCH"
+		(property "Footprint" "3.3V_Buck:MLF-8_ML_MCH"
 			(at 135.89 59.69 0)
 			(hide yes)
 			(show_name no)
@@ -2221,7 +2221,7 @@
 				)
 			)
 		)
-		(property "Footprint" "CONN_1054500101_MOL"
+		(property "Footprint" "CONN_USBC:CONN_1054500101_MOL"
 			(at 55.88 57.15 0)
 			(hide yes)
 			(show_name no)
