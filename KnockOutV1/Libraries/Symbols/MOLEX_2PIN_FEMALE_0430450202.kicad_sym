@@ -1,0 +1,56 @@
+
+(kicad_symbol_lib (version 20211014) (generator kicad_symbol_editor)
+  (symbol "430450202" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+    (property "Reference" "J" (id 0) (at 4.1656 5.3086 0.0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Value" "430450202" (id 1) (at 4.8006 -1.0414 0.0)
+      (effects (font (size 1.27 1.27)) (justify bottom left))
+    )
+    (property "Footprint" "430450202:CONN_SD-43045-001_02_MOL" (id 2) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "DATASHEET" "https://www.molex.com/en-us/products/part-detail-pdf/430450202?display=pdf" (id 4) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "DESCRIPTION" "Micro-Fit 3.0 Right-Angle Header, 3.00mm Pitch, Dual Row, 2 Circuits, with Snap-in Plastic Peg PCB Lock, 0.76Âµm Gold Plating, Glow-Wire Capable, Black" (id 5) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MFR_NAME" "Molex" (id 6) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (property "MANUFACTURER_PART_NUMBER" "430450202" (id 7) (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (justify bottom) hide)
+    )
+    (symbol "430450202_0_0"
+      (polyline
+        (pts (xy 5.08 2.54) (xy 5.08 -5.08)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 5.08 -5.08) (xy 12.7 -5.08)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 12.7 -5.08) (xy 12.7 2.54)) (stroke (width 0.1524))
+      )
+      (polyline
+        (pts (xy 12.7 2.54) (xy 5.08 2.54)) (stroke (width 0.1524))
+      )
+      (pin passive line (at 0.0 0.0 0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "1"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+      (pin passive line (at 0.0 -2.54 0) (length 5.08)
+        (name "~"
+          (effects (font (size 1.016 1.016)))
+        )
+        (number "2"
+          (effects (font (size 1.016 1.016)))
+        )
+      )
+    )
+  )
+)
